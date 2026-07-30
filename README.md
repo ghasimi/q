@@ -8,5 +8,7 @@ q and kdb+ mini projects and POCs.
 
 - `markov-chain/client.q`: Subscribes to the feed and re-estimates the transition matrix as new data arrives
 
+Demo:
 
+![Markov Chain Demo](assets/markov-chain.gif)
 
