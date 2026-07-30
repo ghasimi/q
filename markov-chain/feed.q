@@ -1,4 +1,4 @@
-/ q feed.q -p 5050
+/ q feed.q -p 5050 -t 100
 / -----------------
 / Simulates 2-state Markov Chain
 / and broadcasts to subscribers
@@ -17,7 +17,5 @@ nextState: {state:: 1 - neg 1 - sum (rand 1f) < sums m[state]; state}
 .z.pc: {.u.subs: .u.subs except x}
 
 .z.ts: {
-	{(neg x)(`upd; nextState[])} each .u.subs;
+	{(neg x)(`upd; 0N! nextState[])} each .u.subs;
 	}
-
-\t 500
