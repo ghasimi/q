@@ -17,5 +17,5 @@ nextState: {state:: 1 - neg 1 - sum (rand 1f) < sums m[state]; state}
 .z.pc: {.u.subs: .u.subs except x}
 
 .z.ts: {
-	{(neg x)(`upd; 0N! nextState[])} each .u.subs;
+	{(neg x)(`upd; nextState[]); 1 string state;} each .u.subs;
 	}
